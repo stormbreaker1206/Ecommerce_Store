@@ -1,0 +1,68 @@
+$menu-background: #1B1920;
+$logo-img-folder: 'images';
+
+.navigation{
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  font-family: 'Average', serif;
+
+  .logo{
+
+    width: 10rem;
+    height: 1.7rem;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+
+  .top-bar{
+    background-color: $menu-background;
+
+    .menu{
+      background-color: $menu-background;
+      li{
+        color: #def0fc;
+        a{
+          color: #def0fc;
+          text-decoration: none;
+          @include breakpoint(medium only){
+            font-size: 0.6rem;
+
+          }
+
+          &:hover{
+            color: #ffffff;
+          }
+          &:focus{
+            outline-style: none;
+          }
+
+        }
+      }
+    }
+
+    ul.menu{
+      &.sub{
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        margin-top: 0.7rem;
+
+        @include breakpoint(small only){
+          width: 100% !important;
+        }
+        li{
+          border-bottom: 1px dotted #ffffff;
+          &:last-of-type{
+            border-bottom: none;
+          }
+        }
+
+
+    }
+    }
+  }
+}
